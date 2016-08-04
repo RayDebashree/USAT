@@ -36,7 +36,7 @@ usat(Y, X, COV=NULL, na.check=TRUE)
 | `n.obs` | Number of individuals (with complete observations) used for testing association. |
 
 
-### An Working Example
+### A Working Example
 ```
 source("usat_v1.1.R")
 
