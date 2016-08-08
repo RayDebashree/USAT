@@ -4,6 +4,8 @@ USAT (Unified Score-based Association Test) uses a data-adaptive weighted score-
 Ray, D., Pankow, J.S., Basu, S. "USAT: A Unified Score-based Association Test for Multiple
 Phenotype-Genotype Analysis". *Genetic Epidemiology*, 40(1):20-34, 2016.
 
+**Key Words:** GWAS; MANOVA; Multiple phenotypes; Multivariate analysis; Pleiotropy; Score test
+
 ### Requirements
 R (>= 3.0.1), CompQuadForm, minqa, pracma, survey
 
