@@ -58,8 +58,10 @@ p<-u.out$p.usat
 ```
 
 ### Notes
-1. The method USAT and its software is designed for multiple phenotypes from a random sample. If the ascertainment of individuals in the sample is non-random (e.g., in case-control retrospective study design), it is advisable to account for the sampling scheme (e.g., adjusting the sampling variable as a covariate) when using USAT. One may also use methods and tools designed for the analysis of secondary phenotypes. We proposed one such method (POM-PS) and its software is coming soon!
+1. The method USAT and its software is designed for multiple continuous phenotypes from a random sample. If the ascertainment of individuals in the sample is non-random (e.g., in case-control retrospective study design), it is advisable to account for the sampling scheme (e.g., adjusting the sampling variable as a covariate) when using USAT. One may also use methods and tools designed for the analysis of secondary phenotypes. We proposed one such method (POM-PS) and its software is coming soon!
 
-2. The method USAT and its software is designed for unrelated individuals. If you have two cohorts with overlapping samples and you want to analyse the combined sample, it is desirable to exclude the overlapping individuals, and any related individuals. 
+2. Although USAT software can adjust for covariates, it is advisable to perform covariate adjustments and necessary transformations (e.g., inverse-normal transformation) on the traits and then apply USAT on the residuals. This will speed up total computation time.
+
+3. The method USAT and its software is designed for unrelated individuals. If you have two cohorts with overlapping samples and you want to analyse the combined sample, it is desirable to exclude the overlapping individuals, and any related individuals. 
  
-3. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, you may wait a little longer for the new software (metaUSAT) that is coming soon!
+4. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, you may wait a little longer for the new software (metaUSAT) that is coming soon!
