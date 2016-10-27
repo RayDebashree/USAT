@@ -1,5 +1,5 @@
 ### Description
-USAT (Unified Score-based Association Test) uses a data-adaptive weighted score-based test statistic for testing association of multiple continuous phenotypes with a single genetic marker. The R function `usat` implements this association test. For details of this statistical method, please refer:
+USAT (Unified Score-based Association Test) uses a data-adaptive weighted score-based test statistic for testing association of multiple continuous phenotypes with a single genetic marker. The R function `usat` implements this association test. For details of this statistical method, please refer/cite:
 
 Ray, D., Pankow, J.S., Basu, S. "[USAT: A Unified Score-based Association Test for Multiple
 Phenotype-Genotype Analysis](http://onlinelibrary.wiley.com/doi/10.1002/gepi.21937/full)". *Genetic Epidemiology*, 40(1):20-34, 2016.
@@ -58,8 +58,8 @@ p<-u.out$p.usat
 ```
 
 ### Notes
-1. The method USAT and its software is designed for multiple phenotypes from a random sample. If the ascertainment of individuals in the sample is non-random (e.g., in case-control retrospective study design), it is advisable to account for the sampling scheme (e.g., adjusting the sampling variable as a covariate) when using USAT. One may also use methods and tools designed for the analysis of secondary phenotypes. We proposed one such method and its software is coming soon!
+1. The method USAT and its software is designed for multiple phenotypes from a random sample. If the ascertainment of individuals in the sample is non-random (e.g., in case-control retrospective study design), it is advisable to account for the sampling scheme (e.g., adjusting the sampling variable as a covariate) when using USAT. One may also use methods and tools designed for the analysis of secondary phenotypes. We proposed one such method (POM-PS) and its software is coming soon!
 
 2. The method USAT and its software is designed for unrelated individuals. If you have two cohorts with overlapping samples and you want to analyse the combined sample, it is desirable to exclude the overlapping individuals, and any related individuals. 
  
-3. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, you may wait a little longer for the new software that is coming soon!
+3. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, you may wait a little longer for the new software (metaUSAT) that is coming soon!
