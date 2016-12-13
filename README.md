@@ -30,7 +30,10 @@ usat(Y, X, COV=NULL, na.check=TRUE, na.check.msg=TRUE, manova.out=FALSE, AbsTol=
 | `Y` | The `nxK` phenotype matrix, where `n` is the number of individuals and `K` is the number of phenotypes. The joint association of all `K`  phenotypes with the single marker will be tested. `Y` needs to be in R matrix format. |
 | `X` | The `nx1` column matrix for the single genetic marker, where `n` is the number of individuals. `X` needs to be in R matrix format. |
 | `COV` | The `nxq` matrix of covariates that need to be adjusted in the model. `q` is the number of such covariates. `COV` needs to be in R matrix format. The default value is NULL, i.e., it is assumed there is no covariate in the model. |
-| `na.check`| If value is TRUE (default), the code will check for presence of missing values (coded as `NA`). USAT requires complete observations and any individual with at least one missing value in either `Y`, `X` or `COV` will be removed. Removal of missing observations may substantially reduce the sample size `n` and hence power to detect association. If a substantial proportion of the individuals have missing data, it is recommended (if possible) to impute the missing values before using USAT. |
+| `na.check` | If value is TRUE (default), the code will check for presence of missing values (coded as `NA`). USAT requires complete observations and any individual with at least one missing value in either `Y`, `X` or `COV` will be removed. Removal of missing observations may substantially reduce the sample size `n` and hence power to detect association. If a substantial proportion of the individuals have missing data, it is recommended (if possible) to impute the missing values before using USAT. |
+| `na.check.msg` | If value is TRUE (default), user will receive message updates when presence of missing values (coded as `NA`) is checked. |
+| `manova.out` | If value is FALSE (default), MANOVA statistic and p-value will not be included in the final output. |
+| `AbsTol` | The user can specify the absolute tolerance value used in the numerical integration for evaluating USAT p-values. Default value is 3e-13. `integrate()` function is used for numerical integration. |
 
 #### Value
 | Output | Description |
@@ -39,11 +42,13 @@ usat(Y, X, COV=NULL, na.check=TRUE, na.check.msg=TRUE, manova.out=FALSE, AbsTol=
 | `omg.opt` | The optimal weight $\omega$ based on a grid search over [0, 1]. |
 | `p.usat` | The p-value of association based on the USAT statistic. |
 | `n.obs` | Number of individuals (with complete observations) used for testing association. |
+| `T.manova` | The value of the MANOVA test statistic (scalar). Provided if `manova.out=TRUE`. |
+| `p.manova` | The p-value of association based on MANOVA statistic. Provided if `manova.out=TRUE`. |
 
 
 ### A Working Example
 ```
-source("usat_v1.1.R")
+source("usat_v1.21.R")
 
 # simulate 2 phenotypes on 1000 individuals
 library(MASS) # needed for multivariate normal simulation
