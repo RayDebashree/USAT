@@ -11,6 +11,8 @@ R (>= 3.0.1), CompQuadForm, minqa, pracma, survey
 
 
 ### Changes
+Version 1.21 - December 12, 2016
+> An updated version of the software with more user controls.
 Version 1.1 - April 07, 2016
 > First public release of the software.
 
@@ -19,7 +21,7 @@ Version 1.1 - April 07, 2016
 
 #### Simple example
 ```{r}
-usat(Y, X, COV=NULL, na.check=TRUE)
+usat(Y, X, COV=NULL, na.check=TRUE, na.check.msg=TRUE, manova.out=FALSE, AbsTol=.Machine$double.epsˆ0.8)
 ```
 #### Arguments
 | Input | Description |
