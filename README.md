@@ -7,12 +7,13 @@ Phenotype-Genotype Analysis](http://onlinelibrary.wiley.com/doi/10.1002/gepi.219
 **Key Words:** GWAS; MANOVA; Multiple phenotypes; Multivariate analysis; Pleiotropy; Score test
 
 ### Requirements
-R (>= 3.0.1), CompQuadForm, minqa, pracma, survey
+R (>= 3.0.1), CompQuadForm, minqa, survey
 
 
 ### Changes
 Version 1.21 - December 12, 2016
 > An updated version of the software with more user controls.
+
 Version 1.1 - April 07, 2016
 > First public release of the software.
 
