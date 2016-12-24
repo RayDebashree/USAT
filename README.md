@@ -71,5 +71,7 @@ p<-u.out$p.usat
 2. Although USAT software can adjust for covariates, it is advisable to perform covariate adjustments and necessary transformations (e.g., inverse-normal transformation) on the traits and then apply USAT on the residuals. This will speed up total computation time.
 
 3. The method USAT and its software is designed for unrelated individuals. If you have two cohorts with overlapping samples and you want to analyse the combined sample, it is desirable to exclude the overlapping individuals, and any related individuals. 
+
+4. If you receive an error like `the integral is probably divergent`, try reducing the absolute tolerance parameter `AbsTol`.
  
-4. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, you may wait a little longer for the new software (metaUSAT) that is coming soon!
+5. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, you may wait a little longer for the new software (metaUSAT) that is coming soon!
