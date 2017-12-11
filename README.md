@@ -66,7 +66,7 @@ p<-u.out$p.usat
 ```
 
 ### Notes
-1. The method USAT and its software is designed for multiple continuous phenotypes from a random sample. If the ascertainment of individuals in the sample is non-random (e.g., in case-control retrospective study design), it is advisable to account for the sampling scheme (e.g., adjusting the sampling variable as a covariate) when using USAT. One may also use methods and tools designed for the analysis of secondary phenotypes. We proposed one such method ([POM-PS](http://onlinelibrary.wiley.com/doi/10.1002/gepi.22045/full)) and its [software](https://github.com/RayDebashree/POM-PS) is coming soon!
+1. The method USAT and its software is designed for multiple continuous phenotypes from a random sample. If the ascertainment of individuals in the sample is non-random (e.g., in case-control retrospective study design), it is advisable to account for the sampling scheme (e.g., adjusting the sampling variable as a covariate) when using USAT. One may also use methods and tools designed specifically for the analysis of secondary phenotypes. We proposed one such method ([POM-PS](http://onlinelibrary.wiley.com/doi/10.1002/gepi.22045/full)) and its [software](https://github.com/RayDebashree/POM-PS) is publicly available.
 
 2. Although USAT software can adjust for covariates, it is advisable to perform covariate adjustments and necessary transformations (e.g., inverse-normal transformation) on the traits and then apply USAT on the residuals. This will speed up total computation time.
 
@@ -74,4 +74,4 @@ p<-u.out$p.usat
 
 4. If you receive an error like `the integral is probably divergent`, try reducing the absolute tolerance parameter `AbsTol`.
  
-5. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, you may wait a little longer for the new software (metaUSAT) that is coming soon!
+5. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, please use the new software [metaUSAT](https://github.com/RayDebashree/metaUSAT) that is publicly available now!
