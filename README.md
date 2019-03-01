@@ -67,6 +67,7 @@ p<-u.out$p.usat
 
 ### Notes
 1. The method USAT and its software is designed for multiple continuous phenotypes from a random sample. If the ascertainment of individuals in the sample is non-random (e.g., in case-control retrospective study design), it is advisable to account for the sampling scheme (e.g., adjusting the sampling variable as a covariate) when using USAT. One may also use methods and tools designed specifically for the analysis of secondary phenotypes. We proposed one such method ([POM-PS](http://onlinelibrary.wiley.com/doi/10.1002/gepi.22045/full)) and its [software](https://github.com/RayDebashree/POM-PS) is publicly available.
+   * Caution: USAT is a single-variant association test; so not expected to work well for rare variants (i.e., genetic variants with very low allele-frequencies).
 
 2. Although USAT software can adjust for covariates, it is advisable to perform covariate adjustments and necessary transformations (e.g., inverse-normal transformation) on the traits and then apply USAT on the residuals. This will speed up total computation time.
 
@@ -75,3 +76,7 @@ p<-u.out$p.usat
 4. If you receive an error like `the integral is probably divergent`, try reducing the absolute tolerance parameter `AbsTol`.
  
 5. If you wish to test genetic association of multiple traits (categorical and/or continuous) and you have access to summary statistics only, please use the new software [metaUSAT](https://github.com/RayDebashree/metaUSAT) that is publicly available now!
+
+6. If removal of related individuals is a concern (e.g., sample size gets greatly reduced) or if there is cryptic relatedness that needs to be accounted for, it is advisable to first obtain the GWAS summary statistics for each trait by analyzing each trait separately accounting for the relatedness among the individuals (e.g., using [EPACTS](https://genome.sph.umich.edu/wiki/EPACTS) to analyze each trait). Then apply [metaUSAT](https://github.com/RayDebashree/metaUSAT) on the single trait GWAS summary statistics.
+
+7. USAT, like most other cross-phenotype association methods, assumes multivariate normality (of the underlying traits). While transformations like inverse-normalization help ensure univariate normality of each trait, it does not guarantee multivariate normality of the joint distribution of the traits. More on this coming up [soon](https://github.com/RayDebashree/mvtests)!
