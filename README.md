@@ -2,7 +2,7 @@
 USAT (Unified Score-based Association Test) uses a data-adaptive weighted score-based test statistic for testing association of multiple continuous phenotypes with a single genetic marker. The R function `usat` implements this association test. For details of this statistical method, please refer/cite:
 
 Ray, D., Pankow, J.S., Basu, S. "[USAT: A Unified Score-based Association Test for Multiple
-Phenotype-Genotype Analysis](http://onlinelibrary.wiley.com/doi/10.1002/gepi.21937/full)". *Genetic Epidemiology*, 40(1):20-34, 2016.
+Phenotype-Genotype Analysis](http://onlinelibrary.wiley.com/doi/10.1002/gepi.21937/full)". *Genetic Epidemiology*, 40(1):20-34, 2016. [PMID: 26638693](https://www.ncbi.nlm.nih.gov/pubmed/26638693)
 
 **Key Words:** GWAS; MANOVA; Multiple phenotypes; Multivariate analysis; Pleiotropy; Score test
 
