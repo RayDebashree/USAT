@@ -10,6 +10,13 @@ Phenotype-Genotype Analysis](http://onlinelibrary.wiley.com/doi/10.1002/gepi.219
 R (>= 3.0.1), CompQuadForm, minqa, survey
 
 
+### How to Install within R
+```{r}
+require(devtools)
+source_url("https://github.com/RayDebashree/USAT/blob/master/usat_v1.21.R?raw=TRUE")
+```
+
+
 ### Changes
 Version 1.21 - December 12, 2016
 > An updated version of the software with more user controls.
